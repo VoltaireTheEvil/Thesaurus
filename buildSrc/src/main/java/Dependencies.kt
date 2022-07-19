@@ -45,6 +45,9 @@ object Versions {
     const val runtime = "2.4.2"
     const val roomCompiler = "2.4.2"
 
+    //ViewBinding
+    const val viewBinding = "1.5.6"
+
     //Test
     const val jUnit = "4.13.2"
     const val runner = "1.2.0"
@@ -59,18 +62,18 @@ object Design {
 object Kotlin {
     const val core = "androidx.core:core-ktx:${Versions.core}"
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.stdlib}"
-    const val coroutines_core =
+    const val coroutinesCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCore}"
-    const val coroutines_android =
+    const val coroutinesAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroid}"
 }
 
 object Retrofit {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
-    const val adapter_coroutines =
+    const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
+    const val adapterCoroutines =
         "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.adapterCoroutines}"
-    const val logging_interceptor =
+    const val loggingInterceptor =
         "com.squareup.okhttp3:logging-interceptor:${Versions.interceptor}"
 }
 
@@ -85,7 +88,12 @@ object Coil {
 object Room {
     const val runtime = "androidx.room:room-runtime:${Versions.runtime}"
     const val compiler = "androidx.room:room-compiler:${Versions.roomCompiler}"
-    const val room_ktx = "androidx.room:room-ktx:${Versions.roomKtx}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.roomKtx}"
+}
+
+object ViewBinding {
+    const val viewBinding = "com.github.kirich1409:viewbindingpropertydelegate:${Versions
+        .viewBinding}"
 }
 
 object TestImpl {

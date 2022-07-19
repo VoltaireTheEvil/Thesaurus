@@ -38,14 +38,13 @@ dependencies {
     implementation Design.appcompat
 
     //Design
-    //You should not use the com.android.support and com.google.android.material dependencies in your app at the same time
     implementation Design.material
 
     //Kotlin
     implementation Kotlin.core
     implementation Kotlin.stdlib
-    implementation Kotlin.coroutines_core
-    implementation Kotlin.coroutines_android
+    implementation Kotlin.coroutinesCore
+    implementation Kotlin.coroutinesAndroid
 
     //Koin for Android
     implementation Koin.koin_android
@@ -53,10 +52,19 @@ dependencies {
     //Room
     implementation Room.runtime
     kapt Room.compiler
-    implementation Room.room_ktx
+    implementation Room.roomKtx
 
     //Coil
     implementation Coil.coil
+
+    //Retrofit
+    implementation Retrofit.retrofit
+    implementation Retrofit.converterGson
+    implementation Retrofit.adapterCoroutines
+    implementation Retrofit.loggingInterceptor
+
+    //ViewBinding
+    implementation ViewBinding.viewBinding
 
     //Test
     testImplementation TestImpl.junit

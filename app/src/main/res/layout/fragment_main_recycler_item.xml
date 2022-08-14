@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainRecyclerViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/definitionTextView"
+        style="@style/MainItemImportantText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="definition of the word" />
+
+    <TextView
+        android:id="@+id/examplesTextView"
+        style="@style/MainItemCommonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="first example \nsecond example" />
+
+    <TextView
+        android:id="@+id/synonymsTextView"
+        style="@style/MainItemSecondaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="first synonym, second synonym" />
+
+</LinearLayout>

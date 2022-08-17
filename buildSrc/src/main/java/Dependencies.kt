@@ -34,8 +34,8 @@ object Versions {
     const val interceptor = "4.10.0"
     const val adapterCoroutines = "0.9.2"
 
-    //Koin
-    const val koinAndroid = "3.2.0"
+    //Dagger2
+    const val dagger = "2.43.2"
 
     //Coil
     const val coil = "2.1.0"
@@ -52,6 +52,9 @@ object Versions {
     const val jUnit = "4.13.2"
     const val runner = "1.2.0"
     const val espressoCore = "3.2.0"
+
+    //Navigation
+    const val navigation = "2.5.1"
 }
 
 object Design {
@@ -77,8 +80,9 @@ object Retrofit {
         "com.squareup.okhttp3:logging-interceptor:${Versions.interceptor}"
 }
 
-object Koin {
-    const val koin_android = "io.insert-koin:koin-android:${Versions.koinAndroid}"
+object Dagger {
+    const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
+    const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
 }
 
 object Coil {
@@ -100,4 +104,9 @@ object TestImpl {
     const val junit = "junit:junit:${Versions.jUnit}"
     const val runner = "androidx.test:runner:${Versions.runner}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+}
+
+object NavigationComponent {
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 }

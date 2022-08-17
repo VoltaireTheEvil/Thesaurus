@@ -18,6 +18,16 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes.each {
+        Properties properties = new Properties()
+
+        properties.load(project.rootProject.file("oxfordApi.properties").newDataInputStream())
+        def appId = properties.getProperty("app_id")
+        def apiKey = properties.getProperty("api_key")
+        it.buildConfigField "String", "OXFORD_APP_ID", appId
+        it.buildConfigField "String", "OXFORD_API_KEY", apiKey
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -46,8 +56,9 @@ dependencies {
     implementation Kotlin.coroutinesCore
     implementation Kotlin.coroutinesAndroid
 
-    //Koin for Android
-    implementation Koin.koin_android
+    //Dagger2
+    implementation Dagger.dagger
+    kapt Dagger.daggerCompiler
 
     //Room
     implementation Room.runtime
@@ -65,6 +76,10 @@ dependencies {
 
     //ViewBinding
     implementation ViewBinding.viewBinding
+
+    //Navigation
+    implementation NavigationComponent.navigationFragment
+    implementation NavigationComponent.navigationUi
 
     //Test
     testImplementation TestImpl.junit

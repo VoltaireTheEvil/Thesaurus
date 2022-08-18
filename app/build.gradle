@@ -20,7 +20,6 @@ android {
 
     buildTypes.each {
         Properties properties = new Properties()
-
         properties.load(project.rootProject.file("oxfordApi.properties").newDataInputStream())
         def appId = properties.getProperty("app_id")
         def apiKey = properties.getProperty("api_key")
@@ -43,6 +42,9 @@ android {
 }
 
 dependencies {
+
+    //Modules
+    implementation project(Modules.domainModel)
 
     //AndroidX
     implementation Design.appcompat

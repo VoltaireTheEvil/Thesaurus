@@ -14,7 +14,8 @@ object Releases {
 }
 
 object Modules {
-
+    const val app = ":app"
+    const val domainModel = ":domainModel"
 }
 
 object Versions {

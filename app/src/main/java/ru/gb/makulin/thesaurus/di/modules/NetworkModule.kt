@@ -19,13 +19,13 @@ class NetworkModule {
     fun providesOxfordApiService(retrofit: Retrofit): OxfordApiService = retrofit.create()
 
     @[AppScope Provides]
-    private fun providesGson(): Gson =
+    fun providesGson(): Gson =
         GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
 
     @[AppScope Provides]
-    private fun providesRetrofit(gson: Gson): Retrofit =
+    fun providesRetrofit(gson: Gson): Retrofit =
         Retrofit.Builder()
             .baseUrl(OXFORD_API_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))

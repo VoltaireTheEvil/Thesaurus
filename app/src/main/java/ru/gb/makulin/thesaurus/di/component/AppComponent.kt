@@ -5,7 +5,7 @@ import ru.gb.makulin.thesaurus.di.AppScope
 import ru.gb.makulin.thesaurus.di.modules.AppModule
 
 @[AppScope Component(modules = [AppModule::class])]
-class AppComponent {
+interface AppComponent {
 }
 
 

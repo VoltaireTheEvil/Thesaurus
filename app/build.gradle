@@ -45,6 +45,8 @@ dependencies {
 
     //Modules
     implementation project(Modules.domainModel)
+    implementation project(Modules.repository)
+    implementation project(Modules.core)
 
     //AndroidX
     implementation Design.appcompat

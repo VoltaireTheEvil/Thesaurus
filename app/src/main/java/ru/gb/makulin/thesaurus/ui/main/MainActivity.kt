@@ -1,7 +1,7 @@
 package ru.gb.makulin.thesaurus.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import ru.gb.makulin.thesaurus.R
 
 class MainActivity : AppCompatActivity() {

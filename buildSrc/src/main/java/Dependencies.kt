@@ -15,7 +15,6 @@ object Releases {
 
 object Modules {
     const val app = ":app"
-    const val domainModel = ":domainModel"
     const val repository = ":repository"
     const val core = ":core"
 }
@@ -99,8 +98,10 @@ object Room {
 }
 
 object ViewBinding {
-    const val viewBinding = "com.github.kirich1409:viewbindingpropertydelegate:${Versions
-        .viewBinding}"
+    const val viewBinding = "com.github.kirich1409:viewbindingpropertydelegate:${
+        Versions
+            .viewBinding
+    }"
 }
 
 object TestImpl {
@@ -110,6 +111,7 @@ object TestImpl {
 }
 
 object NavigationComponent {
-    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 }

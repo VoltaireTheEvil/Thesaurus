@@ -1,4 +1,4 @@
-package ru.gb.makulin.domainmodel
+package ru.gb.makulin.core.domainmodel
 
 data class Entry(
     val pronunciations: List<Pronunciation>,

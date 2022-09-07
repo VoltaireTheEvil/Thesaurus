@@ -33,6 +33,7 @@ dependencies {
 
     //Kotlin
     implementation Kotlin.core
+    implementation Kotlin.coroutinesAndroid
 
     //AndroidX
     implementation Design.appcompat

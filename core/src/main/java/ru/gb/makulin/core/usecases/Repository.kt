@@ -1,4 +1,4 @@
-package ru.gb.makulin.repository.repository
+package ru.gb.makulin.core.usecases
 
 interface Repository<T> {
 

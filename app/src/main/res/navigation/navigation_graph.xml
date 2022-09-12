@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/definitionsFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="ru.gb.makulin.thesaurus.ui.main.MainFragment"
-        android:label="fragment_main"
+        android:id="@+id/definitionsFragment"
+        android:name="ru.gb.makulin.definitionsfeature.ui.definitions.DefinitionsFragment"
+        android:label="fragment_definitions"
         tools:layout="@layout/fragment_main" />
 </navigation>

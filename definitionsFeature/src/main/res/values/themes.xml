@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayoutStyle">
+        <item name="android:paddingStart">@dimen/text_input_padding_start</item>
+        <item name="android:paddingEnd">@dimen/text_input_padding_end</item>
+        <item name="android:paddingTop">@dimen/text_input_padding_top</item>
+        <item name="android:paddingBottom">@dimen/text_input_padding_bottom</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:textSize">@dimen/text_input_textSize</item>
+    </style>
+
+    <style name="MainScreenTextView">
+        <item name="android:paddingStart">@dimen/text_view_padding_start</item>
+        <item name="android:paddingEnd">@dimen/text_view_padding_end</item>
+        <item name="android:paddingTop">@dimen/text_view_padding_top</item>
+        <item name="android:textSize">@dimen/text_view_textSize</item>
+        <item name="color">@color/primaryText</item>
+    </style>
+
+    <style name="MainRecyclerView">
+        <item name="android:paddingStart">@dimen/recycler_view_padding_start</item>
+        <item name="android:paddingEnd">@dimen/recycler_view_padding_end</item>
+    </style>
+
+    <style name="MainRecyclerViewItem">
+        <item name="android:paddingTop">@dimen/recycler_view_padding_top</item>
+        <item name="android:elevation">@dimen/cardview_default_elevation</item>
+    </style>
+
+    <style name="MainItemCommonText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/recycler_view_item_text_size</item>
+        <item name="color">@color/primaryText</item>
+    </style>
+
+    <style name="MainItemImportantText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/recycler_view_item_text_size</item>
+        <item name="color">@color/primaryText</item>
+    </style>
+
+    <style name="MainItemSecondaryText">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/recycler_view_item_text_size</item>
+        <item name="color">@color/secondaryText</item>
+    </style>
+
+</resources>

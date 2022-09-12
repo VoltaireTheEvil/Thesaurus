@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Thesaurus</string>
+    <string name="search_edit_text_hint">Введите слово для поиска</string>
+</resources>

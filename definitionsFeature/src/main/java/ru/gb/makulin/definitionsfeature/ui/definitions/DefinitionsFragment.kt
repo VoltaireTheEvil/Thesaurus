@@ -1,26 +1,27 @@
 package ru.gb.makulin.definitionsfeature.ui.definitions
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.*
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.Lazy
 import kotlinx.coroutines.launch
+import ru.gb.makulin.core.domainmodel.DataModel
 import ru.gb.makulin.core.uistates.DefinitionsScreenUiState
 import ru.gb.makulin.core.utils.makeErrSnackbar
 import ru.gb.makulin.core.utils.toMainModel
 import ru.gb.makulin.definitionsfeature.R
 import ru.gb.makulin.definitionsfeature.databinding.FragmentDefinitionsBinding
+import ru.gb.makulin.definitionsfeature.di.DefinitionsComponentViewModel
 import javax.inject.Inject
 
 class DefinitionsFragment : Fragment(R.layout.fragment_definitions) {
 
     @Inject
-    private lateinit var definitionsViewModelFactory: Lazy<DefinitionsViewModel.Factory>
+    internal lateinit var definitionsViewModelFactory: Lazy<DefinitionsViewModel.Factory>
 
     private val binding: FragmentDefinitionsBinding by viewBinding()
 
@@ -28,6 +29,12 @@ class DefinitionsFragment : Fragment(R.layout.fragment_definitions) {
 
     private val definitionsViewModel by viewModels<DefinitionsViewModel> {
         definitionsViewModelFactory.get()
+    }
+
+    override fun onAttach(context: Context) {
+        ViewModelProvider(this).get<DefinitionsComponentViewModel>()
+            .newDefinitionsComponent.inject(this)
+        super.onAttach(context)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,7 +62,9 @@ class DefinitionsFragment : Fragment(R.layout.fragment_definitions) {
                 }
             }
             is DefinitionsScreenUiState.Success -> {
-                if (!appState.dataModel.results[0].word.isNullOrEmpty()) {
+                if (appState.dataModel != DataModel(emptyList()) && !appState.dataModel.results[0].word
+                        .isNullOrEmpty()
+                ) {
                     val mainModel = appState.dataModel.toMainModel()
                     with(binding) {
                         requestedWordTextView.text = mainModel.word

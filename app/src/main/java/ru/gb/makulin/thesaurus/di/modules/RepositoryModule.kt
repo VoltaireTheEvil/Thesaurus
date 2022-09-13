@@ -13,8 +13,8 @@ import ru.gb.makulin.thesaurus.di.annotations.AppScope
 interface RepositoryModule {
 
     @[AppScope Binds]
-    fun providesRepository(implementation: RepositoryImpl): Repository<DataModel>
+    fun bindsRepository(implementation: RepositoryImpl): Repository<DataModel>
 
     @[AppScope Binds]
-    fun providesDataSource(implementation: DataSourceRetrofitImpl): DataSource<DataModel>
+    fun bindsDataSource(implementation: DataSourceRetrofitImpl): DataSource<DataModel>
 }

@@ -8,6 +8,7 @@
     tools:context=".ui.definitions.DefinitionsFragment">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTextInputLayout"
         style="@style/TextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/requesterWordTextView"
+        android:id="@+id/requestedWordTextView"
         style="@style/MainScreenTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

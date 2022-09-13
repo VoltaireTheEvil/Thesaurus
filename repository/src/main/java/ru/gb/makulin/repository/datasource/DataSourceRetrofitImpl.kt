@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class DataSourceRetrofitImpl @Inject constructor(
     private val oxfordApiService: OxfordApiService,
-    private val dispatchersProvider: DispatchersProvider = DispatchersProviderImpl() //TODO DI!
+    private val dispatchersProvider: DispatchersProvider
 ) : DataSource<DataModel> {
 
     override suspend fun fetchData(word: String): DataModel {

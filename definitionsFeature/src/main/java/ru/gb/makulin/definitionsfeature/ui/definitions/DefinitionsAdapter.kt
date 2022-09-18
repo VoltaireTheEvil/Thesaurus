@@ -28,8 +28,8 @@ internal class DefinitionsAdapter :
         fun bind(sense: Sense) {
             with(binding) {
                 definitionTextView.text = sense.definitions[0]
-                examplesTextView.text = sense.examples.joinToString(separator = "\n")
-                synonymsTextView.text = sense.synonyms.joinToString()
+                examplesTextView.text = sense.examples?.joinToString(separator = "\n")
+                synonymsTextView.text = sense.synonyms?.joinToString()
             }
         }
     }

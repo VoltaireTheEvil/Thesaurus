@@ -96,6 +96,7 @@ class DefinitionsFragment : Fragment(R.layout.fragment_definitions) {
     }
 
     private fun setAdapter() {
+        adapter = DefinitionsAdapter()
         binding.meaningsRecyclerView.adapter = adapter
     }
 

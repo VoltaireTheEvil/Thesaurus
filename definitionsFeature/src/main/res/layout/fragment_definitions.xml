@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.definitions.DefinitionsFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_edit_text_hint"
+        app:endIconDrawable="@android:drawable/ic_menu_search"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchEditText"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:text="word" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/requestedWordTextView"
+        style="@style/MainScreenTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="word" />
+
+    <TextView
+        android:id="@+id/transcriptionTextView"
+        style="@style/MainScreenTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="transcription" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meaningsRecyclerView"
+        style="@style/MainRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_definitions_recycler_item" />
+
+
+</LinearLayout>

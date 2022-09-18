@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+dependencies {
+
+    //Modules
+    implementation project(Modules.core)
+
+    //AndroidX
+    implementation Design.appcompat
+
+    //Kotlin
+    implementation Kotlin.core
+    implementation Kotlin.stdlib
+    implementation Kotlin.coroutinesCore
+    implementation Kotlin.coroutinesAndroid
+
+    //Room
+    implementation Room.runtime
+    kapt Room.compiler
+    implementation Room.roomKtx
+
+    //Retrofit
+    implementation Retrofit.retrofit
+    implementation Retrofit.converterGson
+    implementation Retrofit.adapterCoroutines
+    implementation Retrofit.loggingInterceptor
+
+    //Dagger2
+    implementation Dagger.dagger
+
+    //Test
+    testImplementation TestImpl.junit
+    androidTestImplementation TestImpl.runner
+    androidTestImplementation TestImpl.espresso
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

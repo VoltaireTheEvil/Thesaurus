@@ -14,3 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Thesaurus"
 include ':app'
+include ':domainModel'
+include ':repository'
+include ':core'
+include ':mainFeature'
+include ':mainFeature'
+include ':definitionsFeature'

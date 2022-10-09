@@ -69,7 +69,7 @@ class DefinitionsFragment : Fragment(R.layout.fragment_definitions) {
                     with(binding) {
                         requestedWordTextView.text = mainModel.word
                         transcriptionTextView.text =
-                            mainModel.pronunciation.phoneticSpelling
+                            mainModel.pronunciation?.phoneticSpelling ?: ""
                     }
                     adapter?.submitList(mainModel.senses)
                 }
